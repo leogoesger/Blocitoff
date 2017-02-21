@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocitoff">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Bloc It Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+	<ui-view></ui-view>
+
+    
+    <!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBeHeShzgvV1leO-xPGoyWKaflK39ZHXcs",
+	    authDomain: "blocitoff-ef996.firebaseapp.com",
+	    databaseURL: "https://blocitoff-ef996.firebaseio.com",
+	    storageBucket: "blocitoff-ef996.appspot.com",
+	    messagingSenderId: "352300331574"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<!-- Bootstrap -->
+	<script src="/scripts/ui-bootstrap-tpls.js"></script>
+	<!-- ui-router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    
     <script src="/scripts/app.js"></script>
+	<!-- Controllers -->
+	<script src="/scripts/Controllers/LandingCtrl.js"></script>
 </body>
 </html>

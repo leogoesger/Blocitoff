@@ -1,16 +1,16 @@
 {
   "name": "blocitoff",
   "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "Blocitoff",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bloc/bloc-frontend-project-starter.git"
+    "url": "https://github.com/leogoesger/Blocitoff"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
+  "author": "Leo Qiu",
   "license": "ISC",
   "dependencies": {
     "hapi": "~7.5.0",
@@ -27,9 +27,9 @@
     "grunt-hapi": "^0.8.1"
   },
   "bugs": {
-    "url": "https://github.com/bloc/bloc-frontend-project-starter/issues"
+    "url": "https://github.com/leogoesger/Blocitoff"
   },
-  "homepage": "https://github.com/bloc/bloc-frontend-project-starter#readme",
+  "homepage": "https://github.com/leogoesger/Blocitoff",
   "keywords": [
     "bloc"
   ]
