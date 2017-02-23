@@ -1,9 +1,9 @@
  (function() {
-     function LandingCtrl() {
-     	this.heroTitle = "To do to do to do list!!";
+     function LandingCtrl(Todo) {
+     	this.todos = Todo.todos;
      }
  
      angular
          .module('blocitoff')
-         .controller('LandingCtrl', LandingCtrl);
+         .controller('LandingCtrl', ['Todo', LandingCtrl]);
  })();

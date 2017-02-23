@@ -1,2 +1,5 @@
 <h1>hello world!</h1>
-asdfasdf
+
+<div ng-repeat="todo in landing.todos" class="todoList" ng-class="{even: $index%2 === 0}">
+		{{todo["description"]}} <br />
+</div>
