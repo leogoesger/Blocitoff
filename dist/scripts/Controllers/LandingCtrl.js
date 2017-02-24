@@ -1,9 +1,14 @@
  (function() {
-     function LandingCtrl(Todo) {
+     function LandingCtrl($scope, Todo) {
      	this.todos = Todo.todos;
+
+     	$scope.update = function(todo){
+     		console.log("hello")
+     		Todo.addToDo(todo);
+     	};
      }
  
      angular
          .module('blocitoff')
-         .controller('LandingCtrl', ['Todo', LandingCtrl]);
+         .controller('LandingCtrl', ['$scope', 'Todo', LandingCtrl]);
  })();

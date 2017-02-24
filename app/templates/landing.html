@@ -1,5 +1,13 @@
 <h1>hello world!</h1>
-
 <div ng-repeat="todo in landing.todos" class="todoList" ng-class="{even: $index%2 === 0}">
-		{{todo["description"]}} <br />
+		{{todo["Description"]}} <br />
 </div>
+
+<form>
+	<h3>Create a new Item</h3>
+	<input type="text" ng-model="todo.description"> <br />
+	<div class="submission">
+		<button ui-sref="landing">Cancel</button>
+		<input type="submit" ng-click="update(todo)" value="Add">
+	</div>
+</form>

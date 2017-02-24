@@ -5,7 +5,8 @@
     Todo.todos = todos;
 
     Todo.addToDo = function(todo){
-      todos.$add({ Name : todo.name }).then(function(ref) {
+      console.log("hello")
+      todos.$add({ Description : todo.description }).then(function(ref) {
         var id = ref.key;
         console.log("added record with id " + id);
         todos.$indexFor(id); // returns location in the array
