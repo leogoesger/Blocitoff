@@ -12,6 +12,12 @@
                  controller: 'LandingCtrl as landing',
                  templateUrl: '/templates/landing.html'
              });
+         $stateProvider
+             .state('complete', {
+                 url: '/complete',
+                 controller: 'CompleteCtrl as complete',
+                 templateUrl: '/templates/complete.html'
+             });
      }
  
      angular

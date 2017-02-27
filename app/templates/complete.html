@@ -1,0 +1,7 @@
+<h1>Completed</h1>
+
+<div ng-repeat="todo in complete.todos" class="todoList" ng-class="{even: $index%2 === 0}">
+		<div ng-hide="(complete.current_time - todo['Created_at']) < 5000 || todo['Complete'] == true"> {{ todo["Description"] }} </div>
+</div>
+
+<a ui-sref="landing"> Home Page </a>
