@@ -7,7 +7,7 @@
     Todo.addToDo = function(todo){
       current_time = (new Date()).getTime();
       console.log(current_time)
-      todos.$add({ Description : todo.description, Complete : false, Created_at : current_time }).then(function(ref) {
+      todos.$add({ Description : todo.description, Priority : todo.priority, Complete : false, Created_at : current_time }).then(function(ref) {
         var id = ref.key;
         console.log("added record with id " + id);
         todos.$indexFor(id); // returns location in the array

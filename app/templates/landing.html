@@ -6,7 +6,8 @@
 
 <form>
 	<h3>Create a new Item</h3>
-	<input type="text" ng-model="todo.description"> <br />
+	<input type="text" ng-model="todo.priority" placeholder="'High', 'Medium', 'Low'"> <br />
+	<input type="text" ng-model="todo.description" placeholder="To do Description"> <br />
 	<div class="submission">
 		<button ui-sref="landing">Cancel</button>
 		<input type="submit" ng-click="update(todo)" value="Add">
