@@ -1,7 +1,9 @@
-<h1>Progress Tracker at 5 sec</h1>
+<h1>Progress Tracker at 15 sec</h1>
 
 <div ng-repeat="todo in landing.todos | orderBy: '-Priority'" class="todoList" ng-class="{even: $index%2 === 0}">
-		<div ng-hide="(landing.current_time - todo['Created_at']) > 10000 || todo['Complete'] == true"> {{ todo["Description"] }} @ {{todo["Created_at"]}}, Pri: {{todo["Priority"]}} </div>
+		<div ng-hide="(landing.current_time - todo['Created_at']) > 30000 || todo['Complete'] == true"> {{ todo["Description"] }} @ {{todo["Created_at"]}}, Pri: {{todo["Priority"]}} </div>
+
+		<button ng-hide="(landing.current_time - todo['Created_at']) > 30000 || todo['Complete'] == true" ng-click="update(todo)">Complete!</button>
 </div>
 
 <form>
@@ -10,7 +12,7 @@
 	<input type="text" ng-model="todo.description" placeholder="To do Description"> <br />
 	<div class="submission">
 		<button ui-sref="landing">Cancel</button>
-		<input type="submit" ng-click="update(todo)" value="Add">
+		<input type="submit" ng-click="add(todo)" value="Add">
 	</div>
 </form>
 

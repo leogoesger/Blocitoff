@@ -5,9 +5,13 @@
      	this.current_time = (new Date()).getTime();
 
      	console.log(this.todos)
-     	
-     	$scope.update = function(todo){
+
+     	$scope.add = function(todo){
      		Todo.addToDo(todo);
+     	};
+
+     	$scope.update = function(todo){
+     		Todo.updateToDo(todo);
      	};
      }
  
