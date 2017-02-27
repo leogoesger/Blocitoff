@@ -1,9 +1,10 @@
  (function() {
      function LandingCtrl($scope, Todo) {
+     	//this.todos = Todo.todos;
      	this.todos = Todo.todos;
+     	this.current_time = (new Date()).getTime();
 
      	$scope.update = function(todo){
-     		console.log("hello")
      		Todo.addToDo(todo);
      	};
      }
