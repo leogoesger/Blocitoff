@@ -1,7 +1,7 @@
 <h1>Progress Tracker at 5 sec</h1>
 
-<div ng-repeat="todo in landing.todos" class="todoList" ng-class="{even: $index%2 === 0}">
-		<div ng-hide="(landing.current_time - todo['Created_at']) > 5000 || todo['Complete'] == true"> {{ todo["Description"] }} </div>
+<div ng-repeat="todo in landing.todos | orderBy: '-Priority'" class="todoList" ng-class="{even: $index%2 === 0}">
+		<div ng-hide="(landing.current_time - todo['Created_at']) > 10000 || todo['Complete'] == true"> {{ todo["Description"] }} @ {{todo["Created_at"]}}, Pri: {{todo["Priority"]}} </div>
 </div>
 
 <form>
