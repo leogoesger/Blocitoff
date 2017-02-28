@@ -4,8 +4,6 @@
      	this.todos = Todo.todos;
      	this.current_time = (new Date()).getTime();
 
-     	console.log(this.todos)
-
      	$scope.add = function(todo){
      		Todo.addToDo(todo);
      	};

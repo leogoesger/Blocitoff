@@ -28,9 +28,10 @@
     };
 
     Todo.updateToDo = function(todo){
+      console.log(ref.child(todo['$id']));
       ref.child(todo['$id']).update({ Complete: true });
     };
-    //"Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)"
+
     return Todo;
   }
 
