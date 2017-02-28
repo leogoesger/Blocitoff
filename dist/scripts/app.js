@@ -10,8 +10,15 @@
              .state('landing', {
                  url: '/',
                  controller: 'LandingCtrl as landing',
-                 templateUrl: '/templates/landing.html'
+                 templateUrl: '/templates/landing.html',
+                 resolve: {
+                    details: function($firebaseArray){
+                        var ref = firebase.database().ref().child("todos");
+                        return $firebaseArray(ref).$loaded();
+                    }
+                 }
              });
+
          $stateProvider
              .state('complete', {
                  url: '/complete',

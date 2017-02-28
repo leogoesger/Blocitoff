@@ -1,6 +1,6 @@
  (function() {
-     function LandingCtrl($scope, Todo) {
-     	//this.todos = Todo.todos;
+     function LandingCtrl($scope, Todo, details) {
+     	//details contain all the data, details[0], that is resolved and loaded
      	this.todos = Todo.todos;
      	this.current_time = (new Date()).getTime();
 
@@ -15,5 +15,5 @@
  
      angular
          .module('blocitoff')
-         .controller('LandingCtrl', ['$scope', 'Todo', LandingCtrl]);
+         .controller('LandingCtrl', ['$scope', 'Todo', 'details', LandingCtrl]);
  })();
