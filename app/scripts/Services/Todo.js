@@ -4,6 +4,11 @@
     var todos = $firebaseArray(ref);
     Todo.todos = todos;
 
+    // Kevin, I guess this should work!
+    // ref.loaded().then(Todo.updateTodo = function(todo){
+    //     console.log(ref.child(todo['$id']));
+    //   })
+
     Todo.addToDo = function(todo){
       current_time = (new Date()).getTime();
       if (todo.priority.toLowerCase() == "high"){
